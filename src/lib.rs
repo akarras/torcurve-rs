@@ -1,8 +1,8 @@
 fn pinch(v: f64) -> f64 {
     if v < 0.5 {
-        return -v * v;
+        -v * v
     } else {
-        return v * v;
+        v * v
     }
 }
 
