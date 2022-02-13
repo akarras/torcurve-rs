@@ -6,14 +6,31 @@ fn pinch(v: f64) -> f64 {
     }
 }
 
-/// Torcurve implemented from
-/// https://jsfiddle.net/torcado194/5ocmt48a/latest
+/// # Arguments
+/// * `x` - input that drives the curve. clamped to 0..=1
+/// * `a` - controls the start of the curve
+/// * `b` - controls the middle of the curve
+/// * `c` - pinches the tail of the curve
+///
+/// # Example
+/// ```rs
+/// use torcurve_rs::torcurve;
+/// fn run_code() {
+///     for i in 0..=10 {
+///          println!("curve: torcuve(i * 0.1, 3, 0, 0);
+///     }
+/// }
+/// ```
+///
+/// note: implemented using <https://jsfiddle.net/torcado194/5ocmt48a/latest> as reference,
+/// the js fiddle may be useful to tune the parameters
+///
 pub fn torcurve(x: f64, a: f64, b: f64, c: f64) -> f64 {
     let c = pinch(c);
-    let x = 0.0_f64.max(1.0_f64.min(x)); //clamp input to [0-1], behavior is undefined otherwise
+    let x = x.clamp(0.0, 1.0); //clamp input to [0-1], behavior is undefined otherwise
     let s = a.exp(); //could be any exponential like 2^a or 3^a, or just linear
     let s2 = 1.0 / s;
-    let t = 0.0_f64.max(1.0_f64.min(b));
+    let t = b.clamp(0.0, 1.0);
     let u = c; //should normally be clamped but creates possibly useful results outside of the 0-1 range
     let eps = 0.00001; //protect against div/0
 
@@ -39,7 +56,11 @@ pub fn torcurve(x: f64, a: f64, b: f64, c: f64) -> f64 {
     } else {
         (u) * c3 + (1.0 - u) * c1
     };
-    if res.is_nan() { 0.0 } else { res }
+    if res.is_nan() {
+        0.0
+    } else {
+        res
+    }
 }
 
 #[cfg(test)]
