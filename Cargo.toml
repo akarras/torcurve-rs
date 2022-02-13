@@ -3,7 +3,6 @@ name = "torcurve-rs"
 version = "0.1.1"
 edition = "2021"
 description = "parameterized curve formula for generating lots of different curve shapes useful for easing, etc. based on a torcado tweet"
-license-file = "LICENSE"
 license = "MIT"
 homepage = "https://github.com/akarras/torcurve-rs/"
 
