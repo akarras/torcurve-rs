@@ -11,7 +11,6 @@ A reusable implementation of [Toracdo's generalized, parameterized curve formula
 Zero dependencies, and exposes a single function.
 
 ## Authorship
-
 Note, I'm not the original creator of the formula. I just wanted a Rust implementation and figured I should share.
 
 ## Usage

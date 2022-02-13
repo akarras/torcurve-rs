@@ -1,6 +1,6 @@
 [package]
 name = "torcurve-rs"
-version = "0.1.1"
+version = "0.1.2"
 edition = "2021"
 description = "parameterized curve formula for generating lots of different curve shapes useful for easing, etc. based on a torcado tweet"
 license = "MIT"

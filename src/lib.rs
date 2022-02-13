@@ -1,3 +1,5 @@
+#![doc = include_str!("../README.md")]
+
 fn pinch(v: f64) -> f64 {
     if v < 0.5 {
         -v * v
@@ -5,7 +7,8 @@ fn pinch(v: f64) -> f64 {
         v * v
     }
 }
-
+/// a generalized, parameterized curve formula for generating lots of different curve shapes useful for easing, etc.
+///
 /// # Arguments
 /// * `x` - input that drives the curve. clamped to 0..=1
 /// * `a` - controls the start of the curve
