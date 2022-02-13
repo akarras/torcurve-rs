@@ -27,4 +27,6 @@ Add `torcurve-rs = 0.1` to your dependencies
 ```
 `torcurve_rs::torcurve()`
 
-https://t.co/Zx9ZaxCunR
+## Resources
+* [desmos curve demo](https://www.desmos.com/calculator/hagtv9mxv6)
+* [jsfiddle curve demo](https://jsfiddle.net/torcado194/5ocmt48a/latest)
