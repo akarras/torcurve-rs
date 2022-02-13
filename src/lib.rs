@@ -16,11 +16,11 @@ fn pinch(v: f64) -> f64 {
 /// * `c` - pinches the tail of the curve
 ///
 /// # Example
-/// ```rs
+/// ```
 /// use torcurve_rs::torcurve;
 /// fn run_code() {
 ///     for i in 0..=10 {
-///          println!("curve: torcuve(i * 0.1, 3, 0, 0);
+///          println!("curve {}", torcurve(i as f64 * 0.1, 3.0, 0.0, 0.0));
 ///     }
 /// }
 /// ```
