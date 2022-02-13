@@ -25,7 +25,6 @@ Add `torcurve-rs = 0.1` to your dependencies
         }
     }
 ```
-`torcurve_rs::torcurve()`
 
 ## Resources
 * [desmos curve demo](https://www.desmos.com/calculator/hagtv9mxv6)
